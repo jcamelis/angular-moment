@@ -26,7 +26,8 @@ output: 11/24/2014
 ```javascript
 moment("2014-11-24T05:45:00Z").day("2014-11-29T05:45:00Z");
 ```
-```html<p>"2014-12-27T05:45:00Z" | momentDay</p>
+```html
+<p>"2014-12-27T05:45:00Z" | momentDay</p>
 ```
 output: 6
 
