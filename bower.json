@@ -1,6 +1,8 @@
 {
   "name": "angular-moment",
   "version": "0.0.1",
+  "description": "Angular Wrapper for moment.js",
+  "author": "https://github.com/jcamelis",
   "main": "angular-moment.js",
   "ignore": [
     "**/.*",
