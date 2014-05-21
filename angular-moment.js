@@ -21,6 +21,8 @@
 
     var filterFactory = function (name) {
         momentModule.filter(namespacePrefix + capitalize(name), function () {
+            
+            
             return function (input, arg) {
                 var tmp;
                 switch (name) {
@@ -109,6 +111,27 @@
     
     angular.forEach(filters, function (filterName) {
         filterFactory(filterName);
+    });
+    
+    momentModule.directive('momentInterval', function($interval, $compile) {
+
+        return function(scope, element, attrs) {
+            var stopTime; // so that we can cancel the time updates
+            var time = attrs.momentInterval ? parseInt(attrs.momentInterval, 10) : 1000;
+
+            // used to update the UI
+            function reCompile() {
+                $compile(element)(scope);
+            }
+
+            stopTime = $interval(reCompile, time);
+
+            // listen on DOM destroy (removal) event, and cancel the next UI update
+            // to prevent updating time ofter the DOM element was removed.
+            element.on('$destroy', function() {
+                $interval.cancel(stopTime);
+            });
+        };
     });
     
 }(angular, moment));

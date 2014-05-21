@@ -84,3 +84,12 @@ moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
 <p>{{"2014-11-24T05:45:00Z" | momentFormat:"dddd, MMMM Do YYYY, h:mm:ss a"}}</p>
 ```
 output: Monday, November 24th 2014, 2:45:00 am
+
+* fromNow
+```javascript
+moment("2014-05-20T09:45:00Z").fromNow();
+```
+```html
+<p moment-interval="1000">{{"2014-05-21T14:25:00Z" | momentFromNow}}</p>
+```
+output: a few seconds ago
