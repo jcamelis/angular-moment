@@ -3,7 +3,17 @@ angular-moment
 
 Wrapper for moment.js
 
+Bower Install
+=============
+```json
+"dependencies": {
+   "momentjs": "~2.6.0",
+   "angular-moment": "jcamelis/angular-moment"
+}
+```
 
+Filters
+=======
 * add 
 ```javascript
 moment("2014-11-24T05:45:00Z").add('days', 5).calendar()
