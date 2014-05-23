@@ -94,6 +94,16 @@ moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
 <p>{{"2014-11-24T05:45:00Z" | momentFormat:"dddd, MMMM Do YYYY, h:mm:ss a"}}</p>
 ```
 output: Monday, November 24th 2014, 2:45:00 am
+from moment docs
+
+* from
+```javascript
+moment("2014-05-21T15:08:00Z").from("2014-04-21T15:08:00Z");
+```
+```html
+<p>{{"2014-05-21T15:08:00Z" | momentFrom:"2014-04-21T15:08:00Z"}}</p>
+```
+output: in a month
 
 * fromNow
 ```javascript
@@ -103,3 +113,21 @@ moment("2014-05-20T09:45:00Z").fromNow();
 <p moment-interval="1000">{{"2014-05-21T14:25:00Z" | momentFromNow}}</p>
 ```
 output: a few seconds ago
+
+* get
+```javascript
+moment("2014-05-21T15:08:00Z").get();
+```
+```html
+<p >{{"2011-05-21T15:08:00Z" | momentGet:'year'}}</p>
+```
+output: 2011
+
+* hour
+```javascript
+moment().hour(Number);
+```
+```html
+<p >{{"2011-05-21T15:08:00Z" | momentHour:10}}</p>
+```
+output: "2011-05-21T05:08:00.000Z"

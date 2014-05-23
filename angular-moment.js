@@ -53,7 +53,6 @@
         "from",
         "fromNow",
         "get",
-        "hasAlignedHourOffset",
         "hour",
         "hours",
         "invalidAt",

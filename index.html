@@ -30,9 +30,9 @@ and open the template in the editor.
                 <li class="btn"><a href="#diff">diff</a></li>
                 <li class="btn"><a href="#endOf">endOf</a></li>
                 <li class="btn"><a href="#format">format</a></li>
-                <li class="btn"><a href="#">from</a></li>
+                <li class="btn"><a href="#from">from</a></li>
                 <li class="btn"><a href="#fromNow">fromNow</a></li>
-                <li class="btn"><a href="#">get</a></li>
+                <li class="btn"><a href="#get">get</a></li>
                 <li class="btn"><a href="#">hasAlignedHourOffset</a></li>
                 <li class="btn"><a href="#">hour</a></li>
                 <li class="btn"><a href="#">hours</a></li>
@@ -144,12 +144,30 @@ and open the template in the editor.
                 <pre><b>&#123;</b><b>&#123;</b>"2014-11-24T05:45:00Z" | momentFormat:"dddd, MMMM Do YYYY, h:mm:ss a"<b>&#125;</b><b>&#125;</b></pre>
                 <div class="alert alert-success">{{"2014-11-24T05:45:00Z" | momentFormat:"dddd, MMMM Do YYYY, h:mm:ss a"}}</div>
             </div>
+            <div id="from" class="page-header panel-body">
+                <h4>from <span class="small"><a target="_blank" href="http://momentjs.com/docs/#/displaying/from/">moment docs</a></span></h4>
+                <pre>moment("2014-05-21T15:08:00Z").from("2014-04-21T15:08:00Z");</pre>
+                <pre>&lt;p  moment-interval="1000"&gt;<b>&#123;</b><b>&#123;</b>"2014-05-21T15:08:00Z" | momentFrom:"2014-04-21T15:08:00Z"<b>&#125;</b><b>&#125;</b>&lt;/p&gt;</pre>
+                <div class="alert alert-success" >{{"2014-05-21T15:08:00Z" | momentFrom:"2014-04-21T15:08:00Z"}}</div>
+            </div>
             <div id="fromNow" class="page-header panel-body">
                 <h4>fromNow <span class="small"><a target="_blank" href="http://momentjs.com/docs/#/displaying/fromnow/">moment docs</a></span></h4>
                 <pre>moment("2014-05-21T15:08:00Z").fromNow();</pre>
                 <pre>&lt;p  moment-interval="1000"&gt;<b>&#123;</b><b>&#123;</b>"2014-05-21T15:08:00Z" | momentFromNow<b>&#125;</b><b>&#125;</b>&lt;/p&gt;</pre>
                 <div class="alert alert-success" moment-interval="1000">{{"2014-05-21T15:08:00Z" | momentFromNow}}</div>
-            </div>            
+            </div>
+            <div id="get" class="page-header panel-body">
+                <h4>get <span class="small"><a target="_blank" href="http://momentjs.com/docs/#/durations/get/">moment docs</a></span></h4>
+                <pre>moment("2014-05-21T15:08:00Z").get();</pre>
+                <pre>&lt;p &gt;<b>&#123;</b><b>&#123;</b>"2011-05-21T15:08:00Z" | momentGet:'year'<b>&#125;</b><b>&#125;</b>&lt;/p&gt;</pre>
+                <div class="alert alert-success" >{{"2011-05-21T15:08:00Z" | momentGet:'year'}}</div>
+            </div>
+            <div id="hour" class="page-header panel-body">
+                <h4>hour <span class="small"><a target="_blank" href="http://momentjs.com/docs/#/get-set/hour/">moment docs</a></span></h4>
+                <pre>moment().hour(Number);</pre>
+                <pre>&lt;p &gt;<b>&#123;</b><b>&#123;</b>"2011-05-21T15:08:00Z" | momentHour:10<b>&#125;</b><b>&#125;</b>&lt;/p&gt;</pre>
+                <div class="alert alert-success" >{{"2011-05-21T15:08:00Z" | momentHour:2}}</div>
+            </div>
         </div>
     </body>
 </html>
