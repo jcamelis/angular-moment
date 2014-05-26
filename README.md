@@ -131,3 +131,12 @@ moment().hour(Number);
 <p >{{"2011-05-21T15:08:00Z" | momentHour:10}}</p>
 ```
 output: "2011-05-21T05:08:00.000Z"
+
+Directives
+==========
+
+* momentInterval
+
+```html
+<p moment-interval="1000">{{"2014-05-21T14:25:00Z" | momentFromNow}}</p>
+```
