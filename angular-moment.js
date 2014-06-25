@@ -7,7 +7,11 @@
         momentModule = angular.module(moduleName, []),
         utilsModule = angular.module(moduleName + '/utils', []),
         filtersModule = angular.module(moduleName+ '/filters', []);
-        
+    /**
+     * 
+     * @param {String} input
+     * @returns {String}
+     */
     function capitalize (input) {
         return input.charAt(0).toUpperCase() + input.slice(1);
     }
@@ -37,9 +41,7 @@
             };
         });
     }
-    
-    
-    
+
     var filters = [
         "add",
         "calendar",
