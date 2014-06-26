@@ -34,15 +34,15 @@
                         tmp = moment(input, "YYYY-MM");
                         break;
                     case 'endOf': return moment().endOf(input);
-                        break;
+
                     case 'zone': return moment(input).zone(arg + "");
-                        break;
+
                     default: tmp = moment(input);
                 }
                 return tmp[name].apply(tmp, Array.prototype.slice.call(arguments, 1));
             };
         });
-    }
+    };
 
     var filters = [
         "add",

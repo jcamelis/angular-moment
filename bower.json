@@ -1,9 +1,9 @@
 {
   "name": "angular-moment",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular Wrapper for moment.js",
   "author": "https://github.com/jcamelis",
-  "main": "angular-moment.js",
+  "main": "dist/angular-moment.js",
   "ignore": [
     "**/.*",
     "node_modules",
