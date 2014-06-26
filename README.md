@@ -4,7 +4,7 @@ angular-moment
 Wrapper for moment.js
 
 Bower Install
-=============
+-------------
 ```json
 "dependencies": {
    "momentjs": "~2.6.0",
@@ -13,8 +13,8 @@ Bower Install
 ```
 
 Filters
-=======
-* add 
+-------
+* add [moment docs](http://momentjs.com/docs/#/manipulating/add/)
 ```javascript
 moment("2014-11-24T05:45:00Z").add('days', 5).calendar()
 ```
@@ -151,7 +151,7 @@ moment(1404462900000).zone("-5").format("D MMM, HH:mm");
 output: "4 Jul, 08:35"
 
 Directives
-==========
+----------
 
 * momentInterval
 
