@@ -132,6 +132,24 @@ moment().hour(Number);
 ```
 output: "2011-05-21T05:08:00.000Z"
 
+* utc
+```javascript
+moment("2015-01-29T00:00:00Z").utc().format("DD MM YYYY");
+```
+```html
+<p>{{"2015-01-29T00:00:00Z" | momentUtc | momentFormat: "D MMM, HH:mm"}}</p>
+```
+output: 29 Jan, 00:00
+    
+* zone
+```javascript
+moment(1404462900000).zone("-5").format("D MMM, HH:mm");
+```
+```html
+<p>{{1404462900000 | momentZone:-5 | momentFormat: "D MMM, HH:mm"}}</p>
+```
+output: "4 Jul, 08:35"
+
 Directives
 ==========
 

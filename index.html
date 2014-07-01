@@ -16,9 +16,10 @@ and open the template in the editor.
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
         <script src="app/bower_components/angular/angular.js" ></script>
         <script src="app/bower_components/momentjs/moment.js" ></script>
-        <script src="angular-moment.js" ></script>
+        <script src="src/angular-moment.js" ></script>
     </head>
     <body>
+        <object width="250" height="250" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsPlaylist9463463312" name="gsPlaylist9463463312"><param name="movie" value="http://grooveshark.com/widget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&playlistID=94634633&p=0&bbg=000000&bth=000000&pfg=000000&lfg=000000&bt=FFFFFF&pbg=FFFFFF&pfgh=FFFFFF&si=FFFFFF&lbg=FFFFFF&lfgh=FFFFFF&sb=FFFFFF&bfg=666666&pbgh=666666&lbgh=666666&sbh=666666" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/widget.swf" width="250" height="250"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&playlistID=94634633&p=0&bbg=000000&bth=000000&pfg=000000&lfg=000000&bt=FFFFFF&pbg=FFFFFF&pfgh=FFFFFF&si=FFFFFF&lbg=FFFFFF&lfgh=FFFFFF&sb=FFFFFF&bfg=666666&pbgh=666666&lbgh=666666&sbh=666666" /><span><a href="http://grooveshark.com/search/playlist?q=Despegar%204b%20Javier%20Camelis" title="Despegar 4b by Javier Camelis on Grooveshark">Despegar 4b by Javier Camelis on Grooveshark</a></span></object></object>
         <div>
             <ul class="list-group">
                 <li class="btn"><a href="#add">add</a></li>
@@ -75,7 +76,7 @@ and open the template in the editor.
                 <li class="btn"><a href="#">toString</a></li>
                 <li class="btn"><a href="#">tz</a></li>
                 <li class="btn"><a href="#">unix</a></li>
-                <li class="btn"><a href="#">utc</a></li>
+                <li class="btn"><a href="#utc">utc</a></li>
                 <li class="btn"><a href="#">valueOf</a></li>
                 <li class="btn"><a href="#">week</a></li>
                 <li class="btn"><a href="#">weekYear</a></li>
@@ -169,13 +170,19 @@ and open the template in the editor.
                 <pre>&lt;p &gt;<b>&#123;</b><b>&#123;</b>"2011-05-21T15:08:00Z" | momentHour:10<b>&#125;</b><b>&#125;</b>&lt;/p&gt;</pre>
                 <div class="alert alert-success" >{{"2011-05-21T15:08:00Z" | momentHour:2}}</div>
             </div>
-            
+            <div id="utc" class="page-header panel-body">
+                <h4>UTC <span class="small"><a target="_blank" href="http://momentjs.com/docs/#/parsing/utc/">moment docs</a></span></h4>
+                <pre>moment("2015-01-29T00:00:00Z").utc().format("DD MM YYYY");</pre>
+                <pre>&lt;p &gt;<b>&#123;</b><b>&#123;</b>"2015-01-29T00:00:00Z" | momentUtc | momentFormat: "D MMM, HH:mm"<b>&#125;</b><b>&#125;</b>&lt;/p&gt;</pre>
+                <div class="alert alert-success">{{"2015-01-29T00:00:00Z" | momentUtc | momentFormat: "D MMM, HH:mm"}}</div>
+            </div>
             <div id="zone" class="page-header panel-body">
                 <h4>Zone <span class="small"><a target="_blank" href="http://momentjs.com/docs/#/manipulating/timezone-offset/">moment docs</a></span></h4>
                 <pre>moment(1404462900000).zone("-5").format("D MMM, HH:mm"); output: "4 Jul, 08:35"</pre>
                 <pre>&lt;p &gt;<b>&#123;</b><b>&#123;</b>1404462900000 | momentZone:"-5" | momentFormat: "D MMM, HH:mm"<b>&#125;</b><b>&#125;</b>&lt;/p&gt;</pre>
                 <div class="alert alert-success">{{1404462900000 | momentZone:-5 | momentFormat: "D MMM, HH:mm"}}</div>
             </div>
+            
         </div>
     </body>
 </html>
