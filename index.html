@@ -19,8 +19,8 @@ and open the template in the editor.
         <script src="src/angular-moment.js" ></script>
     </head>
     <body>
-        <object width="250" height="250" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsPlaylist9463463312" name="gsPlaylist9463463312"><param name="movie" value="http://grooveshark.com/widget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&playlistID=94634633&p=0&bbg=000000&bth=000000&pfg=000000&lfg=000000&bt=FFFFFF&pbg=FFFFFF&pfgh=FFFFFF&si=FFFFFF&lbg=FFFFFF&lfgh=FFFFFF&sb=FFFFFF&bfg=666666&pbgh=666666&lbgh=666666&sbh=666666" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/widget.swf" width="250" height="250"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&playlistID=94634633&p=0&bbg=000000&bth=000000&pfg=000000&lfg=000000&bt=FFFFFF&pbg=FFFFFF&pfgh=FFFFFF&si=FFFFFF&lbg=FFFFFF&lfgh=FFFFFF&sb=FFFFFF&bfg=666666&pbgh=666666&lbgh=666666&sbh=666666" /><span><a href="http://grooveshark.com/search/playlist?q=Despegar%204b%20Javier%20Camelis" title="Despegar 4b by Javier Camelis on Grooveshark">Despegar 4b by Javier Camelis on Grooveshark</a></span></object></object>
         <div>
+            <h4>Filters</h4>
             <ul class="list-group">
                 <li class="btn"><a href="#add">add</a></li>
                 <li class="btn"><a href="#calendar">calendar</a></li>
@@ -89,8 +89,13 @@ and open the template in the editor.
                 <li class="btn"><a href="#">zoneAbbr</a></li>
                 <li class="btn"><a href="#">zoneName</a></li>
             </ul>
+            <h4>Directives</h4>
+            <ul class="list-group">
+                <li class="btn"><a href="#moment-interval">momentInterval</a></li>
+            </ul>
         </div>
         <div class="panel panel-default">
+            <h3>Filters</h3>
             <div id="add" class="page-header panel-body">
                 <h4>add <span class="small"><a target="_blank" href="http://momentjs.com/docs/#/manipulating/add/">moment docs</a></span></h4>
                 <pre>moment("2014-11-24T05:45:00Z").add('days', 5).calendar()</pre>
@@ -181,6 +186,12 @@ and open the template in the editor.
                 <pre>moment(1404462900000).zone("-5").format("D MMM, HH:mm"); output: "4 Jul, 08:35"</pre>
                 <pre>&lt;p &gt;<b>&#123;</b><b>&#123;</b>1404462900000 | momentZone:"-5" | momentFormat: "D MMM, HH:mm"<b>&#125;</b><b>&#125;</b>&lt;/p&gt;</pre>
                 <div class="alert alert-success">{{1404462900000 | momentZone:-5 | momentFormat: "D MMM, HH:mm"}}</div>
+            </div>
+            <h3>Directives</h3>
+            <div id="moment-interval" class="page-header panel-body">
+                <h4>Moment Interval</h4>
+                <pre>&lt;p <span style="color: green">moment-interval</span>="<span style="color: blue">5000</span>" &gt;<b>&#123;</b><b>&#123;</b>"2014-07-01T02:25:00Z" | momentFromNow<b>&#125;</b><b>&#125;</b>&lt;/p&gt;</pre>
+                <p  class="alert alert-success" moment-interval="5000">{{"2014-07-01T14:21:00Z" | momentFromNow}}</p>
             </div>
             
         </div>
