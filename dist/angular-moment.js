@@ -137,4 +137,8 @@
         };
     });
     
+    momentModule.factory("angularMoment", function () {
+        return moment;
+    });
+    
 }(angular, moment));
