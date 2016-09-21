@@ -1,6 +1,6 @@
 {
   "name": "angular-moment",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Angular Wrapper for moment.js",
   "author": "https://github.com/jcamelis",
   "main": "dist/angular-moment.min.js",
@@ -11,11 +11,11 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "1.2.16",
-    "momentjs": "~2.6.0"
+    "angular": "~1.5.0",
+    "moment": "~2.10.0"
   },
   "devDependencies": {
-    "angular-mocks": "1.2.16",
-    "angular-scenario": "1.2.16"
+    "angular-mocks": "~1.5.0",
+    "angular-scenario": "~1.5.0"
   }
 }

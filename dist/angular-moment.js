@@ -15,7 +15,7 @@
     function capitalize (input) {
         return input.charAt(0).toUpperCase() + input.slice(1);
     }
-        
+
 
     momentModule.filter("moment", function () {
         return function (input) {
@@ -111,7 +111,7 @@
         "zoneAbbr",
         "zoneName"
     ];
-    
+
     angular.forEach(filters, function (filterName) {
         filterFactory(filterName);
     });
